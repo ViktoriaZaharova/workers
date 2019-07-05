@@ -1,0 +1,1127 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  overflow-x: hidden
+  background: #fff
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+h1
+  color: #ffffff
+  font-size: 63px
+  line-height: 68.98px
+  font-family: 'GothamProBold', sans-serif
+  span
+    display: block
+    color: $accent
+
+h2
+  color: #333333
+  width: 100%
+  text-align: center
+  font-size: 35px
+  font-family: 'GothamProBold', sans-serif
+
+h3
+  font-size: 19px
+  text-transform: uppercase
+  letter-spacing: 0.28px
+  font-family: 'GothamProBold', sans-serif
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  &:hover
+    text-decoration: none
+
+button, .btn-primary, .btn
+  outline: none
+  border: none
+  box-shadow: none
+  transition: .3s ease
+
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+input, .form-control
+  outline: none
+  box-shadow: none
+  box-sizing: border-box
+  &:valid
+    color: #fff
+  &:hover, &:focus
+    box-shadow: none
+    background: transparent
+    &::placeholder
+      color: #fff
+
+
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.btn-border
+  border-radius: 12px
+  border: 2px solid $orange
+  color: #ffffff
+  font-family: 'proxima-sb', sans-serif
+  font-size: 14px
+  background: transparent
+  text-transform: uppercase
+  &:hover
+    background: transparent
+    border-color: $line
+
+.btn-accent
+  background-image: linear-gradient(-18deg, #fd5900 0%, #fd9316 100%)
+  border-radius: 12px
+  color: #ffffff
+  text-transform: uppercase
+  font-size: 17px
+  font-family: "arial-bold", sans-serif
+  width: 336px
+  height: 64px
+  &:hover
+    background-image: linear-gradient(-18deg, #fd9316 0%, #fd5900 100%)
+
+.btn-blue-accent
+  background-image: linear-gradient(-43deg, #09a1d1 0%, #0066b5 100%)
+  border-radius: 12px
+  color: #ffffff
+  font-size: 17px
+  text-transform: uppercase
+  font-family: "arial-bold", sans-serif
+  width: 278px
+  height: 56px
+  &:hover
+    background-image: linear-gradient(-43deg, #0066b5 0%, #09a1d1 100%)
+    color: #fff
+
+
+.container
+  max-width: 1210px
+
+
+.logo
+  display: flex
+  align-items: center
+  .icon
+    width: 116px
+  .text
+    margin: 0 0 0 29px
+    text-transform: uppercase
+    color: #fff
+    font-size: 19px
+    font-family: 'GothamProBold', sans-serif
+    max-width: 96px
+
+
+.phone
+  color: #ffffff
+  font-size: 35px
+  text-transform: uppercase
+  font-family: 'GothamProBold', sans-serif
+  letter-spacing: -4.09px
+  &:hover
+    color: $accent
+
+//header
+header
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+
+.header-top
+  padding: 40px 0
+  color: #fff
+  .logo
+    margin: 0 71px 0 0
+  .phone
+    margin: 0 27px 0 55px
+  .btn-border
+    width: 184px
+    height: 56px
+  .box-right
+    display: flex
+    align-items: center
+
+.box-schedule
+  display: flex
+  flex-direction: column
+  padding: 0 64px 0 68px
+  position: relative
+  text-transform: uppercase
+  font-family: 'museo-500', sans-serif
+  border:
+    right: 1px solid $line
+    left: 1px solid $line
+  &:before
+    content: ''
+    position: absolute
+    left: 34px
+    top: 0
+    width: 19px
+    height: 19px
+    background: url("../img/calendar-icon.png") no-repeat center
+      size: contain
+  p
+    font-size: 14px
+    margin: 0 0 5px 0
+  span
+    font-size: 21px
+
+.header-top__content
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+//main
+main
+  position: relative
+  background: url("../img/bg1.jpg") no-repeat center
+    size: cover
+  color: #fff
+  padding: 335px 0 172px
+  h5
+    margin: 38px 0 62px
+    max-width: 770px
+    font-size: 17px
+    line-height: 28px
+  .line
+    margin: 70px 0 52px 0
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+.price-face
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  color: #fff
+  border-radius: 12px
+  border: 2px solid $border-blue
+  width: 227px
+  height: 64px
+  text-align: center
+  font-family: "arial-bold", sans-serif
+  font-size: 17px
+  padding: 0 0 17px 0
+  margin: 0 0 0 26px
+  img
+    width: 14px
+    margin: 0 5px
+  span
+    letter-spacing: 0.16px
+  p
+    margin: 0 5px
+    font-size: 32px
+    letter-spacing: 0.31px
+    line-height: 26px
+
+.advantages-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  max-width: 760px
+
+.advantages-box
+  display: flex
+  align-items: center
+  font-size: 15px
+  font-family: 'gotham-m', sans-serif
+  p
+    max-width: 123px
+    margin: 0 0 0 24px
+
+.video-play
+  display: flex
+  align-items: center
+  color: #fff
+  width: fit-content
+  &:hover
+    color: $orange
+  .icon
+    border-radius: 50%
+    position: relative
+    width: 82px
+    height: 82px
+    min-width: 82px
+    background: #fff
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      background: url("../img/play.png") no-repeat center
+        size: contain
+      width: 20px
+      height: 20px
+  .text
+    margin: 0 0 0 -20px
+    border-radius: 24px
+    background-color: $blue
+    padding: 11px 24px 8px 40px
+    font-size: 15px
+    letter-spacing: 0.38px
+    width: 181px
+    height: 52px
+    font-family: 'museo-300', sans-serif
+
+
+//navigation
+.navbar
+  padding: 0
+  border-radius: 12px
+  background-color: $navigation-bg
+  border: 1px solid rgba(110, 139, 251, 0.5)
+  .box-right
+    display: none
+
+.navbar-nav
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  > li
+      padding: 20px 23px 21px
+      display: flex
+      align-items: center
+      flex: auto
+      position: relative
+      //border:
+      //  right: 1px solid $line
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translate(0,-50%)
+        height: 23px
+        width: 1px
+        background: $line
+      &:last-child
+        &:before
+          display: none
+      &:first-child
+        padding: 20px 44px 21px 23px
+      &:nth-child(2)
+        padding: 20px 42px 21px 40px
+      &:nth-child(3)
+        padding: 20px 48px 21px 51px
+      &:nth-child(4)
+        padding: 20px 59px 21px 65px
+      &:nth-child(5)
+        padding: 20px 60px 21px 70px
+      &:last-child
+        padding: 20px 35px 21px 65px
+      a
+        color: #fff
+        text-transform: uppercase
+        font-size: 17px
+        font-family: 'arial-bold', sans-serif
+        text-align: center
+        position: relative
+        width: 100%
+        &:hover
+          color: $orange
+      .icon-arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 23px
+        height: 23px
+        min-width: 23px
+        border-radius: 50%
+        background: $orange url("../img/arrow-icon.png") no-repeat center
+          size: 9px
+        margin: 0 0 0 20px
+        cursor: pointer
+        position: relative
+  .menu-item-has-children
+    &:hover
+      .submenu
+        opacity: 1
+        visibility: visible
+        pointer-events: auto
+    .icon-arrow
+      &:hover
+        + .submenu
+            display: flex
+
+.submenu
+  position: absolute
+  flex-direction: column
+  opacity: 0
+  visibility: hidden
+  left: 0
+  top: 64px
+  z-index: 2
+  width: 100%
+  background: $navigation-bg
+  pointer-events: none
+  li
+    a
+      color: #fff
+      padding: 10px 20px
+      text-align: left
+      text-transform: none
+
+.navbar-toggler
+  display: none
+
+.menu-item-has-children
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+
+//workers
+.workers
+  background: url("../img/bg2.png") no-repeat center
+    size: cover
+  margin: -110px 0 -200px
+  z-index: 2
+  position: relative
+  padding: 224px 0 156px
+
+.workers-content
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+
+.nav-tabs
+  display: none
+  flex-direction: column
+  width: 334px
+  border: none
+  .nav-item
+    &:first-child
+
+      a
+        border: none
+        .icon
+          background: url("../img/tab-icon1.png") no-repeat center
+            size: contain
+    &:nth-child(2)
+      a
+        .icon
+          background: url("../img/tab-icon2-2.png") no-repeat center
+            size: contain
+    &:nth-child(3)
+      a
+        .icon
+          background: url("../img/tab-icon3.png") no-repeat center
+            size: contain
+    &:nth-child(4)
+      a
+        .icon
+          background: url("../img/tab-icon4.png") no-repeat center
+            size: contain
+    &:nth-child(5)
+      a
+        .icon
+          background: url("../img/tab-icon5.png") no-repeat center
+            size: contain
+    &:nth-child(6)
+      a
+        .icon
+          background: url("../img/tab-icon6.png") no-repeat center
+            size: contain
+    &:nth-child(7)
+      a
+        .icon
+          background: url("../img/tab-icon7.png") no-repeat center
+            size: contain
+    .nav-link.active
+      background: url("../img/active-li.png") transparent no-repeat center
+        size: 100%
+      border-color: transparent
+      color: #fff
+      .text
+        .name
+          color: #fff
+        .rate
+          color: #fff
+          .price
+            background-image: linear-gradient(-225deg, $orange 0%, #ffa540 100%)
+    &:first-child
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon1-2.png") no-repeat center
+            size: contain
+    &:nth-child(2)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon2.png") no-repeat center
+            size: contain
+    &:nth-child(3)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon3-2.png") no-repeat center
+            size: contain
+    &:nth-child(4)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon4-2.png") no-repeat center
+            size: contain
+    &:nth-child(5)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon5-2.png") no-repeat center
+            size: contain
+    &:nth-child(6)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon6-2.png") no-repeat center
+            size: contain
+    &:nth-child(7)
+      .nav-link.active
+        .icon
+          background: url("../img/tab-icon7-2.png") no-repeat center
+            size: contain
+  .nav-link
+    outline: none
+    box-sizing: border-box
+    background: transparent
+    border: none
+      top: 1px solid #ededed
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 21px 27px
+    &:hover
+      border: none
+        top: 1px solid #ededed
+    .icon
+      width: 55px
+      height: 54px
+      margin: 0 37px 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+    .text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      .name
+        text-transform: uppercase
+        color: #040404
+        font-size: 19px
+        font-family: 'GothamProBold', sans-serif
+        margin: 0 0 5px
+      .rate
+        width: 100%
+        display: flex
+        align-items: center
+        color: #040404
+        .price
+          margin: 0 5px 0 0
+          display: flex
+          align-items: center
+          font-size: 19px
+          color: #fff
+          padding: 7px
+          border-radius: 4px
+          background-image: linear-gradient(-43deg, #09a1d1 0%, #0066b5 100%)
+          font-family: 'GothamProBold', sans-serif
+          img
+            width: 10px
+            margin: 0 5px
+
+.panel
+  box-shadow: none
+
+.card-body
+  h3
+    color: $subtitle
+    font-size: 19px
+    text-transform: uppercase
+    letter-spacing: 0.28px
+    font-family: 'GothamProBold', sans-serif
+    margin: 0 0 46px
+  h2
+    text-align: left
+    max-width: 540px
+    margin: 0 0 32px
+  .description
+    color: #333333
+    font-size: 15px
+    line-height: 27px
+    margin: 49px 0 66px
+
+.box-callback
+  box-shadow: 0 0 16px rgba(53, 94, 144, 0.06)
+  border-radius: 12px
+  padding: 21px 17px 22px 29px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .phone
+    color: #000000
+    font-size: 29px
+    font-family: 'museo-700', sans-serif
+  .btn-accent
+    width: 143px
+    height: 56px
+
+
+.tab-content
+  width: calc(100% - 334px)
+  padding: 0 0 0 110px
+  box-sizing: border-box
+  .card
+    background: transparent
+    border: none
+      radius: 0
+    box-shadow: none
+    .card-body
+      padding: 0
+
+.workers-box
+  border-radius: 12px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 354px
+  height: 237px
+  box-shadow: 0 0 16px rgba(53, 94, 144, 0.06)
+  margin: 28px auto
+  img
+    border-radius: 12px
+
+.owl-dots
+  width: 100%
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  button.owl-dot.active
+    background-color: #7db9e7
+  button.owl-dot
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    outline: none
+    background-color: #d5d5d5
+    margin: 0 4px
+    span
+      display: none
+
+.workers-slider
+  width: 100%
+  .owl-nav
+    button.owl-prev, button.owl-next
+      z-index: 2
+      position: absolute
+      top: 40%
+      transform: translate(0,-50%)
+      width: 40px
+      height: 40px
+      border-radius: 12px
+      background: url("../img/arrow-left.png") #f0eded no-repeat center
+        size: 10px
+    button.owl-next
+      right: -23px
+      background: url("../img/arrow-right.png") #f0eded no-repeat center
+        size: 10px
+    button.owl-prev
+      left: -23px
+  .owl-item
+    .workers-box
+      margin: 28px auto
+
+//popular-services
+.popular-services
+  padding: 253px 0 0
+  position: relative
+  z-index: 1
+  background: url("../img/bg3.png") no-repeat center
+    size: cover
+  .icon-arrow-bottom
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 25px auto 45px
+
+
+.popular-services__content
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.popular-services__box
+  border-radius: 12px
+  overflow: hidden
+  position: relative
+  background-image: linear-gradient(to top, #09a1d1 0%, #0066b5 100%)
+  box-shadow: 0 0 16px rgba(53, 94, 144, 0.06)
+  padding: 30px 67px 50px
+  .text
+    z-index: 1
+    color: #fff
+    max-width: 393px
+    position: relative
+  h4
+    text-transform: uppercase
+    font-size: 19px
+    font-family: 'museo-700', sans-serif
+    line-height: 24px
+    margin: 0 0 25px
+    span
+      font-size: 17px
+      display: block
+  p
+    font-size: 17px
+    font-family: 'arialMt', sans-serif
+		line-height: 25px
+		strong
+			font-family: 'arialMTb', sans-serif
+			font-weight: 700
+  .line
+    margin: 45px 0 0 -12px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    width: 100%
+    justify-content: space-between
+    .price
+      width: 216px
+      height: 71px
+      display: flex
+      align-items: center
+      padding: 0 27px
+      color: #ffffff
+      font-size: 28px
+      font-family: 'museo-700', sans-serif
+      background: url('../img/price-decor.png') no-repeat center
+        size: contain
+      img
+        margin: 0 0 0 13px
+        width: 13px
+    .btn
+      width: 151px
+      height: 53px
+      font-size: 17px
+
+.popular-services__box-min
+  width: 578px
+  border-radius: 12px 0 0 12px
+  margin: 0 0 29px
+  .img
+    position: absolute
+    right: 0
+    bottom: 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 509px
+    height: 100%
+    background: url("../img/decor.png") no-repeat left center
+      size: cover
+    z-index: 1
+
+
+.popular-services__box.w-100
+	padding: 0
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	justify-content: space-between
+	.img
+		width: 413px
+		height: 269px
+		border-radius: 12px
+		overflow: hidden
+		img
+			height: 100%
+			max-width: none
+	.text
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		flex-direction: row
+		width: calc(100% - 413px)
+		padding: 0 58px
+		max-width: none
+		.line
+			width: 216px
+			flex-direction: column
+			align-items: flex-start
+			justify-content: space-around
+			margin: 0
+			.price
+				margin: 0 0 26px
+
+.calculate-cost
+  z-index: 1
+  background-image: linear-gradient(-228deg, #0052c0 0%, #047cbc 100%)
+  width: 100%
+  border-radius: 12px
+  margin: 75px 0 -110px 0
+  color: #fff
+  padding: 58px 64px 62px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    bottom: -44px
+    background: url("../img/men-works.png") no-repeat center
+      size: contain
+    width: 882px
+    height: 493px
+
+  h3
+    color: #fff
+    text-align: left
+    font-size: 35px
+    text-transform: none
+    font-family: 'gotham-bl', sans-serif
+    margin: 0 0 10px
+    position: relative
+    z-index: 1
+  p
+    font-size: 14px
+    position: relative
+    z-index: 1
+  form
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 41px 0 0 0
+    label
+      margin: 0 35px 0 0
+      input
+        background-color: rgba(#f2f0f0, .2)
+        width: 237px
+        height: 53px
+        border: 1px solid rgba(110, 139, 251, 0.59)
+        border-radius: 12px
+        color: #fff
+        font-size: 15px
+        padding: 0 37px
+        &::placeholder
+          color: #fff
+    button
+      width: 240px
+      height: 53px
+      margin: 0 0 0 8px
+
+.consent
+  margin: 34px 0 0 0
+  max-width: 413px
+  color: #ffffff
+  font-size: 14px
+
+  a
+    color: #ffffff
+    display: inline
+    text-decoration: underline
+
+
+//question
+.question
+  position: relative
+  background: #f6f6f6
+  padding: 833px 0 60px
+  margin: -585px 0 0
+
+  h2
+    text-align: left
+    margin: 0 0 35px
+  .image-bg
+    position: absolute
+    right: 0
+    bottom: 0
+    background: url("../img/workers1.png") no-repeat center
+      size: cover
+    width: 1126px
+    height: 505px
+  .container
+    z-index: 1
+    position: relative
+
+.accordion
+  max-width: 661px
+  .card
+    border: none
+    box-shadow: 0 0 16px rgba(53, 94, 144, 0.06)
+    border-radius: 12px
+    background-color: #ffffff
+    margin: 0 0 12px
+    .card-header
+      border-radius: 12px
+      border: none
+      background: #fff
+      padding: 19px 27px
+      .btn:not(.collapsed)
+        &:before
+          transform: rotate(180deg)
+          top: 30%
+      .btn
+        padding: 0
+        justify-content: flex-start
+        color: #333333
+        width: 100%
+        text-align: left
+        font-size: 15px
+        font-family: 'GothamProBold', sans-serif
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          right: 0
+          top: 50%
+          transform: translate(0,-50%)
+          width: 22px
+          height: 13px
+          background: url("../img/arrow-bottom.png") no-repeat center
+            size: contain
+
+        &:hover, &:focus
+          text-decoration: none
+          color: #0066cc
+      &:first-child
+        border-radius: 12px
+  .card-body
+    font-size: 15px
+    color: #333
+    line-height: 22px
+    padding: 12px 70px 39px 25px
+    border-radius: 0 0 12px 12px
+
+.accordion>.card:not(:first-of-type)
+  border-radius: 12px
+  .card-header:first-child
+    border-radius: 12px
+
+.accordion>.card:not(:first-of-type):not(:last-of-type), .accordion>.card:first-of-type
+  border-radius: 12px
+
+
+//footer
+footer
+  background-image: linear-gradient(-228deg, #0052c0 0%, #047cbc 100%)
+  padding: 67px 0 78px
+  color: #fff
+  .title
+    color: #fff
+    text-transform: uppercase
+    margin: 0 0 15px
+    font-size: 18px
+    font-family: 'GothamProBold', sans-serif
+
+.footer-menu
+  margin: 77px 0 0 0
+  width: 295px
+  li
+    a
+      color: #fff
+      font-size: 14px
+      line-height: 25px
+      &:hover
+        color: $orange
+
+.footer-menu2
+  padding: 0 0 0 38px
+  width: 300px
+  ul
+    margin: 0 0 16px 0
+
+.footer-menu3
+  padding: 0 0 0 20px
+  width: 324px
+
+.footer-download
+  margin: 77px 0 0 0
+  width: 250px
+  padding: 0 0 0 60px
+
+.footer-content
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: space-between
+  .info
+    max-width: 289px
+    font-size: 12px
+    line-height: 16px
+    margin: 20px 0 0 0
+  .logo
+    margin: 0 60px 0 0
+    .text
+      margin: 0 0 0 25px
+
+.developer
+  display: flex
+  align-items: center
+  font-size: 13px
+  margin: 45px 0 0 -20px
+  .text
+    font-family: 'segoe', sans-serif
+    margin: 0 0 0 -5px
+  a
+    text-decoration: underline
+    color: #fff
+
+.footer-box.box-schedule
+  text-transform: none
+  font-size: 12px
+  line-height: 16px
+  justify-content: flex-start
+  align-items: flex-end
+  padding: 10px 35px 0 55px
+  &:before
+    display: none
+  p
+    font-size: 12px
+    line-height: 16px
+    margin: 0
+
+.box-address
+  font-size: 12px
+  padding: 10px 85px 0 40px
+  border-right: 1px solid #6e8bfb
+  text-align: right
+  p
+    max-width: 198px
+  a
+    display: block
+    color: $accent
+    font-size: 12px
+    text-decoration: underline
+    line-height: 16px
+
+.footer-box.box-social
+  text-align: right
+  padding: 6px 0 0 60px
+  .phone
+    letter-spacing: 0
+    font-size: 23px
+    text-transform: uppercase
+    font-family: 'museo-500', sans-serif
+
+
+.list-social
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin: 10px 0 0 0
+  li
+    margin: 0 13px 0 0
+    &:last-child
+      margin: 0
+
+
+.doc
+  width: 100%
+  display: flex
+  align-items: center
+  margin: 0 0 15px
+  p
+    width: 80px
+    margin: 0 0 0 10px
+  .links
+    text-decoration: underline
+    margin: 0 15px 0 0
+    font-size: 14px
+    color: #ffffff
+    &:last-child
+      margin: 0
+
+@import "media"
+// Всегда в конце
